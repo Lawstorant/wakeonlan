@@ -241,10 +241,11 @@ if (! isValidPort($DEFAULT_PORT)) {
 	exit(2);
 }
 
-if (! isValidIPAddress($DEFAULT_IP)) {
-	warn "Invalid default IP address: $DEFAULT_IP\n";
-	exit(3);
-}
+# disabled IP check to allow hostnames
+# if (! isValidIPAddress($DEFAULT_IP)) {
+# 	warn "Invalid default IP address: $DEFAULT_IP\n";
+# 	exit(3);
+# }
 
 if ($filename and ! -f $filename) {
 	warn "Invalid filename: $filename\n";
